@@ -47,16 +47,17 @@
     <div class="container py-5">
 		 <h1 class="text-5xl font-effect-fire font-bold text-center text-effect text-custom-color mb-8">New Admin Register</h1>
 		<form id="addadmin-form" class="max-w-lg mx-auto bg-transparent p-4 rounded shadow-lg" action="addadmin.jsp" method="post">
-            <div class="mb-3">
-                
-                <input type="text" id="fname" name="fname" class="form-control" align="center" placeholder="First Name" required>
-                <input type="text" id="lname" name="lname" class="form-control" align="center" placeholder="Last Name" required>
-                <input type="email" id="email" name="email" class="form-control" align="center" placeholder="Email ID" required>
-                <input type="password" id="password" name="password" class="form-control" align="center" placeholder="Password" required>
-                <input type="number" id="number" name="phone" class="form-control" align="center" placeholder="Phone No." required>    
-                <br>      
-                <button type="submit" class="btn btn-primary w-100" value="Login">Register</button>
-            </form>
+    <div class="mb-3">
+        <input type="text" id="fname" name="fname" class="form-control" align="center" placeholder="First Name" required>
+        <input type="text" id="lname" name="lname" class="form-control" align="center" placeholder="Last Name" required>
+        <input type="email" id="email" name="email" class="form-control" align="center" placeholder="Email ID" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address.">
+        <input type="password" id="password" name="password" class="form-control" align="center" placeholder="Password" required minlength="8" title="Password must be at least 8 characters long.">
+        <input type="tel" id="phone" name="phone" class="form-control" align="center" placeholder="Phone No." required pattern="\d{10}" title="Phone number must be 10 digits long.">    
+        <br>      
+        <button type="submit" class="btn btn-primary w-100" value="Login">Register</button>
+    </div>
+</form>
+
     </div>
 	 <script>
         // Function to validate the form
